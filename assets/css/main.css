@@ -25,6 +25,10 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+	img {
+    max-width:100%;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -2859,6 +2863,64 @@ input, select, textarea {
 
 		}
 
+			.features-2 {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		width: calc(100% + .5em);
+		margin: 0 0 3em -2em;
+		padding: 0;
+		list-style: none;
+	}
+
+		.features-2 li {
+			width: calc(10% - .5em);
+			margin-left: 4em;
+			margin-top: 2em;
+			padding: 0;
+		}
+
+			.features-2 li > :last-child {
+				margin-bottom: 0;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			.features-2 li {
+				width: calc(20% - .5em);
+			}
+
+				.features-2 li:nth-child(3) {
+					margin-top: 1em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.features-2 {
+				width: 100%;
+				margin: 0 0 2em 0;
+			}
+
+				.features-2 li {
+					width: 33%;
+					margin-left: 1em;
+					margin-right: 1em;
+					margin-top: 2em;
+				}
+
+		}
+
 /* Statistics */
 
 	.statistics {
@@ -2942,9 +3004,9 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.statistics {
-				display: block;
+				display: inline-block;
 				width: 20em;
-				max-width: 100%;
+				max-width: 50%;
 				margin: 0 auto 2em auto;
 			}
 
